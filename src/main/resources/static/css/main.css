@@ -1,0 +1,253 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+    background-image: url("https://w0.peakpx.com/wallpaper/818/148/HD-wallpaper-whatsapp-background-cool-dark-green-new-theme-whatsapp.jpg");
+}
+
+.chat-container {
+    display: flex;
+    max-width: 800px;
+    min-width: 800px;
+    min-height: 600px;
+    max-height: 600px;
+    margin: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.logo {
+    padding-left: 45px;
+    color: white;
+}
+.profile {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.users-list {
+    flex: 1;
+    border-right: 1px solid #ccc;
+    padding: 20px;
+    box-sizing: border-box;
+    background-image: linear-gradient(120deg, hsl(182deg 100% 20%) 0%, hsl(179deg 100% 23%) 0%, hsl(176deg 100% 26%) 2%, hsl(173deg 100% 29%) 5%, hsl(169deg 100% 33%) 14%, hsl(165deg 100% 36%) 87%, hsl(161deg 100% 39%) 96%, hsl(157deg 100% 43%) 99%, hsl(152deg 100% 46%) 100%, hsl(147deg 97% 50%) 100%);;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+}
+
+.users-list-container {
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.users-list h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.users-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.user-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.user-item.active {
+    background-color: #cdebff;
+    color: #4f4f4f;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.user-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-item span {
+    font-weight: bold;
+}
+
+.separator {
+    height: 1px;
+    background-color: #ccc;
+    margin: 10px 0;
+}
+
+.chat-area {
+    background-image: url("https://w0.peakpx.com/wallpaper/73/322/HD-wallpaper-universe-color-doodle-art-whatsapp-background.jpg");
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.message {
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+#chat-messages {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+.message p {
+    padding: 0 12px;
+    border-radius: 15px;
+    word-wrap: break-word;
+}
+
+.user-item span.nbr-msg {
+    margin-left: 10px;
+    background-color: #f8fa6f;
+    color: white;
+    padding: 5px;
+    width: 10px;
+    border-radius: 50%;
+    height: 10px;
+}
+
+.sender {
+    background-color: #3498db;
+    color: #fff;
+    align-self: flex-end;
+}
+
+.receiver {
+    background-color: #ecf0f1;
+    color: #333;
+    align-self: flex-start;
+}
+
+.message-input {
+    margin-top: auto;
+    display: flex;
+}
+
+.message-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.message-input button {
+    padding: 10px;
+    border: none;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.user-form {
+    color: white;
+    max-width: 400px;
+    padding: 40px;
+    box-sizing: border-box;
+    background-image: linear-gradient(
+            120deg,
+            hsl(182deg 100% 20%) 0%,
+            hsl(179deg 100% 23%) 0%,
+            hsl(176deg 100% 26%) 2%,
+            hsl(173deg 100% 29%) 5%,
+            hsl(169deg 100% 33%) 14%,
+            hsl(165deg 100% 36%) 87%,
+            hsl(161deg 100% 39%) 96%,
+            hsl(157deg 100% 43%) 99%,
+            hsl(152deg 100% 46%) 100%,
+            hsl(147deg 97% 50%) 100%
+    );
+    border-radius: 8px;
+    margin-bottom: 3rem;
+}
+
+.user-form h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.user-form label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.user-form input {
+    padding: 10px 3px 10px;
+    font-size: 18px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.user-form button {
+    padding: 12px;
+    border: none;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+a.logout {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer {
+
+    padding: 20px;
+    text-align: center;
+    color : white;
+    font-weight: bold;
+    left: 0;
+    bottom: 0;
+
+}
+
+/* Style des liens dans le footer */
+footer a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+/* Style des liens au survol dans le footer */
+footer a:hover {
+    color: #031a2b;
+}
+
+
+

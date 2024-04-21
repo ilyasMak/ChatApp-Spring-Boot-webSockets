@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="img/icon.png" type="image/x-icon">
+    <title>Chats </title>
+</head>
+<body>
+
+<h2></h2>
+
+<div class="user-form" id="username-page">
+    <h2>Entrer dans la discussion</h2>
+    <form id="usernameForm">
+        <label for="nickname">Nom :</label>
+        <input type="text" id="nickname" name="nickname" required>
+
+        <label for="fullname">Prenom:</label>
+        <input type="text" id="fullname" name="realname" required>
+
+        <button type="submit">Enter Chatroom</button>
+    </form>
+</div>
+
+<div class="chat-container hidden" id="chat-page">
+    <div class="users-list">
+        <div class="users-list-container">
+            <h2>Utilisateurs en ligne</h2>
+            <ul id="connectedUsers">
+            </ul>
+        </div>
+        <div>
+            <p id="connected-user-fullname"></p>
+            <a class="logout" href="javascript:void(0)" id="logout">Se déconnecter</a>
+        </div>
+    </div>
+
+    <div class="chat-area">
+        <div class="chat-area" id="chat-messages">
+        </div>
+
+        <form id="messageForm" name="messageForm" class="hidden">
+            <div class="message-input">
+                <input autocomplete="off" type="text" id="message" placeholder="Type your message...">
+                <button>
+                    Envoyer</button>
+            </div>
+        </form>
+    </div>
+</div>
+<style>    footer {
+
+    padding: 20px;
+    text-align: center;
+color : white;
+    font-weight: bold;
+    left: 0;
+    bottom: 0;
+
+}
+
+/* Style des liens dans le footer */
+footer a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+/* Style des liens au survol dans le footer */
+footer a:hover {
+    color: #031a2b;
+}</style>
+<footer>
+    <p>Droit d'auteur © 2024 <a href="https://ilyasmak.github.io/I/LYA/S.html"> Ilyas</a> & <a href="">Yacine</a>. Tous droits réservés.</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.4/sockjs.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>
